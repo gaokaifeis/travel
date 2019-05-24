@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" :key="item.id" v-for="item of page">
           <div class="icon-img">
@@ -9,6 +9,7 @@
           <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -18,6 +19,9 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+      swiperOption: {
+        pagination: '.swiper-pagination'
+      },
       iconList: [
         {
           id: '0001',
@@ -89,33 +93,35 @@ export default {
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
-  .icon
-    overflow: hidden
-    position: relative
-    height: 0
-    width: 25%
-    float: left
-    padding-bottom: 25%
-    .icon-img
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: .44rem
-      box-sizing: border-box
-      padding: .1rem
-      .icon-imge-content
-        height: 100%
-        display: block
-        margin: 0 auto
-    .icon-desc
-      position: absolute
-      left: 0
-      right: 0
-      bottom: 0
-      line-height: .44rem
-      height: .44rem
-      color: $darkTextColor
-      text-align: center
-      ellipsis()
+  .icons
+    margin-top: .1rem
+    .icon
+      overflow: hidden
+      position: relative
+      height: 0
+      width: 25%
+      float: left
+      padding-bottom: 22%
+      .icon-img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border-box
+        padding: .1rem
+        .icon-imge-content
+          height: 100%
+          display: block
+          margin: 0 auto
+      .icon-desc
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        line-height: .44rem
+        height: .44rem
+        color: $darkTextColor
+        text-align: center
+        ellipsis()
 </style>

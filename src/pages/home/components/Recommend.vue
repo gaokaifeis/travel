@@ -18,29 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/201301/07/d40895cabac2af8a93835fbb.jpg_200x200_adf9e4d2.jpg',
-          title: '莫干山',
-          desc: '7291条评论'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/201301/07/d40895cabac2af8a93835fbb.jpg_200x200_adf9e4d2.jpg',
-          title: '莫干山',
-          desc: '7291条评论'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/201301/07/d40895cabac2af8a93835fbb.jpg_200x200_adf9e4d2.jpg',
-          title: '莫干山',
-          desc: '7291条评论'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>

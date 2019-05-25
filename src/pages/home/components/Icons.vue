@@ -20,56 +20,13 @@ export default {
   data () {
     return {
       swiperOption: {
+        autoplay: false,
         pagination: '.swiper-pagination'
-      },
-      iconList: [
-        {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-          desc: '一日游'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-          desc: '百草原'
-        },
-        {
-          id: '0004',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-          desc: '主题乐园'
-        },
-        {
-          id: '0005',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '湖州必游'
-        },
-        {
-          id: '0006',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-          desc: 'Kitty乐园'
-        },
-        {
-          id: '0007',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-          desc: '莫干山'
-        },
-        {
-          id: '0008',
-          imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
-          desc: '南浔古镇'
-        },
-        {
-          id: '0009',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-          desc: '自然风光'
-        }
-      ]
+      }
     }
+  },
+  props: {
+    iconList: Array
   },
   computed: {
     pages () {

@@ -7,7 +7,7 @@ import fastClick from 'fastclick'
 import 'swiper/dist/css/swiper.css'
 
 import App from './App'
-import router from './router'
+import router from './router/'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'

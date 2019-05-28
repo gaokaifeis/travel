@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/201301/07/d40895cabac2af8a93835fbb.jpg_600x330_32b2aec7.jpg" />
+      <img class="banner-img" :src="bannerImg" />
       <div class="banner-info">
-        <div class="banner-title">莫干山(AAAA景区)</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number"><span class="iconfont banner-icon">&#xe7b0;</span>39</div>
       </div>
     </div>
-    <common-gallary @close="handleGallaryClose" :imgs="imgs" v-show="showGallary"></common-gallary>
+    <common-gallary @close="handleGallaryClose" :imgs="gallaryImgs" v-show="showGallary"></common-gallary>
   </div>
 </template>
 
@@ -20,12 +20,13 @@ export default {
   },
   data () {
     return {
-      showGallary: false,
-      imgs: [
-        'http://img1.qunarzz.com/sight/p0/201308/28/fc9d40de765f5309c8d65eac.jpg_r_800x800_9fcfe571.jpg',
-        'http://img1.qunarzz.com/sight/p0/201301/07/cc547f0d7e5e4aa793835fbb.jpg_r_800x800_22678c86.jpg'
-      ]
+      showGallary: false
     }
+  },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
   },
   methods: {
     handleBannerClick () {
